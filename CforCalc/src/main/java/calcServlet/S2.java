@@ -1,0 +1,36 @@
+package calcServlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class S2 extends HttpServlet{
+	@Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = resp.getWriter()) {
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet S2</title>");
+            out.println("</head>");
+            out.println("<body>");
+            int nn1 = Integer.parseInt(req.getParameter("n1"));
+            int nn2 = Integer.parseInt(req.getParameter("n2"));
+            
+            int p = nn1 * nn2;
+            int sum = (int)req.getAttribute("sum");
+            out.println("<h1>");
+            out.println("Sum is = " +sum);
+            out.println("product is =" +p);
+            out.println("</h1>");
+            out.println("</body");
+            out.println("</html>");                     
+        }
+    }
+}
+

@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<html>
+<head>
+    <title>First JSP Page</title>
+</head>
+<body>
+    <h1>First JSP Page</h1>
+
+    <%! 
+        int a = 50, b = 10; 
+        String name = "Welcome to JSP"; 
+        
+        public int doSum() { 
+            return a + b; 
+        } 
+        
+        public String reverse() { 
+            StringBuffer br = new StringBuffer(name); 
+            return br.reverse().toString(); 
+        } 
+    %>
+
+    <% 
+        out.println("b = " + b); 
+        out.println("<br>Sum = " + doSum()); 
+        out.println("<br>Reverse of 'Welcome to JSP' = " + reverse()); 
+    %>
+
+    <h2 style="color: red;">Sum is: <%= doSum() %></h2>
+    
+    <p>Value of a: <%= a %></p>
+    <p>Name: <%= name %></p>
+</body>
+</html>

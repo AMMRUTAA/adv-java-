@@ -1,0 +1,22 @@
+package first1;
+
+import java.io.IOException;
+
+import jakarta.servlet.GenericServlet;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+
+public class second2 extends GenericServlet{
+
+	@Override
+	public void service(ServletRequest arg0, ServletResponse arg1) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("this is servlet using generic servlet")
+		res.setContentType("text/html");
+		printWriter out = res.getWriter();
+		out.print("this is my second servlet using generic servlet</h1>")
+		
+	}
+
+}

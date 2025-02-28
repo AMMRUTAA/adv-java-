@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body style="background-color:pink">
+<h1>Firstjsp psp Page</h1>
+<%!
+int a = 50;
+int a = 10;
+String name = "Welcome to JSP";
+public int doSum()
+{
+return a+b;
+}
+public String reverse()
+{
+StringBuffer br = new StringBuffer(name);
+return br.reverse().toString();
+}
+%>
+<%
+out.println("a =" +a);
+out.println("<br>");
+out.println("b =" +b);
+out.println("Sum = "+doSum());
+out.println("<br>");
+out.println("Reversse of Welcome to JSP = " +reverse());
+%>
+<h1>style="color: red;">Sum is: <%=doSum()%></h1>
+<h1><%=a %></h1>
+<%= name%>>
+</body>
+</html>
