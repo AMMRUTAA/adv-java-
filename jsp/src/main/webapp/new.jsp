@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Meta tag to define the character encoding -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>First JSP Page</title>
 </head>
@@ -10,38 +9,38 @@
     <h1>First JSP Page</h1>
 
 <%!
-    // Declaring instance variables
-    int a = 50;
-    int b = 10;
-    String name = "Welcome to JSP";
+    // Declaring variables that can be used anywhere on this page
+    int a = 50; // A number variable with value 50
+    int b = 10; // Another number variable with value 10
+    String name = "Welcome to JSP"; // A string variable
 
-    // Method to calculate the sum of 'a' and 'b'
+    // A function (method) to add two numbers and return the result
     public int doSum() {
-        return a + b;
+        return a + b; // Adds 'a' and 'b' and gives back the result
     }
 
-    // Method to reverse the string 'name'
+    // A function to reverse the text stored in 'name' and return it
     public String reverse() {
-        StringBuffer br = new StringBuffer(name);
-        return br.reverse().toString();
+        StringBuffer br = new StringBuffer(name); // Converts the string to a modifiable format
+        return br.reverse().toString(); // Reverses the text and returns it
     }
 %>
 
 <%
-    // Displaying values using scriptlet
-    out.println("a = " + a);
+    // Printing values directly in the HTML page using JSP
+    out.println("Value of a = " + a); // Displays the value of 'a'
+    out.println("<br>"); // Adds a line break
+    out.println("Value of b = " + b); // Displays the value of 'b'
     out.println("<br>");
-    out.println("b = " + b);
+    out.println("Sum of a and b = " + doSum()); // Displays the sum of 'a' and 'b'
     out.println("<br>");
-    out.println("Sum = " + doSum());
-    out.println("<br>");
-    out.println("Reverse of 'Welcome to JSP' = " + reverse());
+    out.println("Reversed text: " + reverse()); // Displays the reversed version of 'name'
 %>
 
-<!-- Displaying results using JSP Expression Language -->
-<h1 style="color:red;">Sum is: <%= doSum() %></h1>
-<h1><%= a %></h1>
-<%= name %>
+<!-- Displaying values in the page using JSP expressions (shorter and cleaner way) -->
+<h1 style="color:red;">Sum is: <%= doSum() %></h1> <!-- Shows the sum in a red heading -->
+<h1>Value of a: <%= a %></h1> <!-- Displays the value of 'a' -->
+<p>Original text: <%= name %></p> <!-- Shows the original string value -->
 
 </body>
 </html>
