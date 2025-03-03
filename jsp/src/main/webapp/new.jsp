@@ -1,8 +1,7 @@
-<%@ page contentType="text/html; charset=UTF-8" %> 
+<%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- This meta tag ensures the correct character encoding for proper text display -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>First JSP Page</title>
 </head>
